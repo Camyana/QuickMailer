@@ -80,8 +80,8 @@ end)
 
 function QM:OnInitialize()
     -- Load saved variables with proper structure
-    if LauraConsumablesDB then
-        QM.db = LauraConsumablesDB
+    if QuickMailerDB then
+        QM.db = QuickMailerDB
     else
     -- Ensure proper structure exists
         QM.db = {
@@ -394,7 +394,7 @@ function QM:SlashCommand(input)
     elseif input == "record" then
         self:RecordCurrentCharacter()
     elseif input == "save" then
-        LauraConsumablesDB = QM.db
+        QuickMailerDB = QM.db
         print("QuickMailer: Forced save of current data")
     elseif input:match("^addchar ") then
         local charName = input:match("^addchar (.+)")
@@ -1543,7 +1543,7 @@ end
 
 -- Save variables on logout
 local function SaveVariables()
-    LauraConsumablesDB = QM.db
+    QuickMailerDB = QM.db
 end
 
 local logoutFrame = CreateFrame("Frame")
