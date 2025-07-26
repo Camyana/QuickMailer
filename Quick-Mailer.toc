@@ -1,0 +1,8 @@
+## Interface: 110107
+## Title: Quick Mailer
+## Notes: Quick mail consumables and items to alts with saved preferences
+## Author: Cam
+## Version: 1.0.0
+## SavedVariables: QuickMailerDB
+
+Quick-Mailer.lua
